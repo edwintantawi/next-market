@@ -1,7 +1,9 @@
+import { Button } from '~/components/ui';
+
 export default function Home() {
   return (
-    <main>
-      <h1 className="text-center p-4">Next Market</h1>
+    <main className="grid h-screen place-content-center gap-4">
+      <Button>Next Market</Button>
     </main>
   );
 }
