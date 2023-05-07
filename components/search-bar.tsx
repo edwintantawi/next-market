@@ -24,7 +24,7 @@ export const SearchBar = () => {
         ref={searchInputRef}
         name="query"
         placeholder="Find your dream products"
-        className="ml-2 h-9"
+        className="h-9"
       />
       <input type="submit" hidden />
     </form>

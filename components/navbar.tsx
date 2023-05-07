@@ -9,7 +9,7 @@ import { SearchBar } from '~/components/search-bar';
 export const Navbar = () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-white">
-      <div className="container flex h-14 items-center gap-2 md:gap-4 ">
+      <div className="container flex h-14 items-center gap-4">
         <Link href="/" className="flex items-center gap-1">
           <Logo size={20} />
           <div className="hidden whitespace-nowrap font-bold md:block">
@@ -19,7 +19,7 @@ export const Navbar = () => {
 
         <SearchBar />
 
-        <div className="flex gap-1">
+        <div className="hidden gap-1 sm:flex">
           <ThemeToggle />
 
           <Button variant="ghost" size="sm" className="p-2" asChild>
@@ -33,7 +33,7 @@ export const Navbar = () => {
           </Button>
         </div>
 
-        <div className="flex gap-2">
+        <div className="hidden gap-2 sm:flex">
           <Button variant="secondary" size="sm">
             Login
           </Button>
