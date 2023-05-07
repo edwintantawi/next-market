@@ -1,10 +1,12 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import { useRef } from 'react';
 import { Input } from '~/components/ui/input';
 
 export const SearchBar = () => {
   const router = useRouter();
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -13,11 +15,13 @@ export const SearchBar = () => {
     const query = formData.get('query');
 
     router.push(`/search?q=${query}`);
+    searchInputRef.current?.blur();
   };
 
   return (
     <form className="w-full" onSubmit={handleSubmit}>
       <Input
+        ref={searchInputRef}
         name="query"
         placeholder="Find your dream products"
         className="ml-2 h-9"
