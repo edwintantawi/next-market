@@ -1,4 +1,5 @@
-import { ProductCard } from '~/components/product-card';
+import { ProductList } from '~/components/product-list';
+import { ProductItem } from '~/components/product-item';
 import { Product } from '~/lib/types';
 
 export default async function Home() {
@@ -6,10 +7,10 @@ export default async function Home() {
   const products = (await response.json()) as Product[];
 
   return (
-    <main className="grid grid-cols-2 gap-4 py-8 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6">
+    <ProductList>
       {products.map((product) => (
-        <ProductCard key={product.id} product={product} />
+        <ProductItem key={product.id} product={product} />
       ))}
-    </main>
+    </ProductList>
   );
 }

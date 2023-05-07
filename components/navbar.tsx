@@ -2,13 +2,13 @@ import Link from 'next/link';
 import { GithubIcon } from 'lucide-react';
 
 import { Logo } from '~/components/ui/logo';
-import { Input } from '~/components/ui/input';
 import { Button } from '~/components/ui/button';
 import { ThemeToggle } from '~/components/theme-toggle';
+import { SearchBar } from '~/components/search-bar';
 
 export const Navbar = () => {
   return (
-    <nav className="border-b">
+    <nav className="sticky top-0 z-50 border-b bg-white">
       <div className="container flex h-14 items-center gap-2 md:gap-4 ">
         <Link href="/" className="flex items-center gap-1">
           <Logo size={20} />
@@ -17,7 +17,7 @@ export const Navbar = () => {
           </div>
         </Link>
 
-        <Input placeholder="Find your dream products" className="ml-2 h-9" />
+        <SearchBar />
 
         <div className="flex gap-1">
           <ThemeToggle />
