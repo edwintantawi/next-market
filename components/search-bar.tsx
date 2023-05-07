@@ -1,7 +1,8 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { useRef } from 'react';
+import { useRouter } from 'next/navigation';
+
 import { Input } from '~/components/ui/input';
 
 export const SearchBar = () => {
