@@ -7,6 +7,7 @@ import { Badge } from '~/components/ui/badge';
 import { Button } from '~/components/ui/button';
 import { Separator } from '~/components/ui/separator';
 import { Product } from '~/lib/types';
+import { MotionDiv } from '~/components/motion-div';
 
 export default async function ProductDetail({
   params,
@@ -22,14 +23,14 @@ export default async function ProductDetail({
     <div className="pb-16">
       <header className="py-4 md:py-8">
         <Button variant="secondary" asChild>
-          <Link href="/">
+          <Link href="/" scroll={false}>
             <ArrowLeftIcon size={20} className="mr-1" />
             Back
           </Link>
         </Button>
       </header>
       <article className="grid grid-cols-1 gap-6 md:grid-cols-[0.7fr,1fr] md:gap-12 xl:grid-cols-2">
-        <div>
+        <MotionDiv layoutId={params.product_id}>
           <AspectRatio ratio={1 / 1}>
             <Image
               fill
@@ -41,7 +42,7 @@ export default async function ProductDetail({
               className="rounded-md border bg-white object-contain p-12 shadow-sm"
             />
           </AspectRatio>
-        </div>
+        </MotionDiv>
         <div>
           <header className="">
             <Badge className="my-2">{product.category}</Badge>
