@@ -1,13 +1,12 @@
 import Image from 'next/image';
-import Link from 'next/link';
-import { ArrowLeftIcon, StarIcon } from 'lucide-react';
+import { StarIcon } from 'lucide-react';
 
 import { AspectRatio } from '~/components/ui/aspect-ratio';
 import { Badge } from '~/components/ui/badge';
-import { Button } from '~/components/ui/button';
 import { Separator } from '~/components/ui/separator';
 import { Product } from '~/lib/types';
 import { MotionDiv } from '~/components/motion-div';
+import { BackButton } from '~/components/back-button';
 
 export default async function ProductDetail({
   params,
@@ -22,12 +21,7 @@ export default async function ProductDetail({
   return (
     <div className="pb-16">
       <header className="py-4 md:py-8">
-        <Button variant="secondary" asChild>
-          <Link href="/" scroll={false}>
-            <ArrowLeftIcon size={20} className="mr-1" />
-            Back
-          </Link>
-        </Button>
+        <BackButton>Back</BackButton>
       </header>
       <article className="grid grid-cols-1 gap-6 md:grid-cols-[0.7fr,1fr] md:gap-12 xl:grid-cols-2">
         <MotionDiv layoutId={params.product_id}>
