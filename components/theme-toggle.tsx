@@ -16,8 +16,6 @@ import { Button } from '~/components/ui/button';
 export const ThemeToggle = () => {
   const { theme, setTheme } = useTheme();
 
-  console.log({ theme });
-
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -35,23 +33,29 @@ export const ThemeToggle = () => {
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>Themes</DropdownMenuLabel>
-        <DropdownMenuGroup>
+        <DropdownMenuGroup className="space-y-1">
           <DropdownMenuItem
-            className="cursor-pointer"
+            className={`cursor-pointer ${
+              theme === 'light' && 'bg-accent text-accent-foreground'
+            }`}
             onClick={() => setTheme('light')}
           >
             <SunIcon className="mr-2 h-4 w-4" />
             <span>Light</span>
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="cursor-pointer"
+            className={`cursor-pointer ${
+              theme === 'dark' && 'bg-accent text-accent-foreground'
+            }`}
             onClick={() => setTheme('dark')}
           >
             <MoonIcon className="mr-2 h-4 w-4" />
             <span>Dark</span>
           </DropdownMenuItem>
           <DropdownMenuItem
-            className="cursor-pointer"
+            className={`cursor-pointer ${
+              theme === 'system' && 'bg-accent text-accent-foreground'
+            }`}
             onClick={() => setTheme('system')}
           >
             <Laptop2Icon className="mr-2 h-4 w-4" />
