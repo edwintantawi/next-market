@@ -23,13 +23,14 @@ export const Navbar = () => {
           <ThemeToggle />
 
           <Button variant="ghost" size="sm" className="p-2" asChild>
-            <Link
+            <a
               href="https://github.com/edwintantawi/next-market"
               target="_blank"
+              referrerPolicy="no-referrer"
             >
               <GithubIcon size={20} />
               <span className="sr-only">Open github</span>
-            </Link>
+            </a>
           </Button>
         </div>
 
