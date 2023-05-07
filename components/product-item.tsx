@@ -10,7 +10,7 @@ import { Separator } from '~/components/ui/separator';
 export const ProductItem = ({ product }: { product: Product }) => {
   return (
     <li>
-      <article className="relative h-full rounded-lg border p-2 shadow hover:bg-gray-50 md:p-4">
+      <article className="relative h-full rounded-lg border p-2 shadow hover:bg-gray-50 dark:hover:bg-gray-900 md:p-4">
         <AspectRatio ratio={1 / 1}>
           <Image
             fill

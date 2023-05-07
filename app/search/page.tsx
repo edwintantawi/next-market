@@ -19,9 +19,9 @@ export default async function Search(props: { searchParams: { q?: string } }) {
 
   return (
     <>
-      <header className="space-y-2 pb-2 pt-6">
+      <header className="space-y-1 pb-2 pt-6 md:space-y-2">
         <h1 className="text-xl font-bold sm:text-2xl lg:text-3xl">
-          Search Product: {query}
+          Search Product: <span className="text-muted-foreground">{query}</span>
         </h1>
         {isNotFound && (
           <p className="text-sm text-muted-foreground">

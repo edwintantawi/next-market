@@ -8,7 +8,7 @@ import { SearchBar } from '~/components/search-bar';
 
 export const Navbar = () => {
   return (
-    <nav className="sticky top-0 z-50 border-b bg-white">
+    <nav className="sticky top-0 z-50 border-b bg-white dark:bg-background">
       <div className="container flex h-14 items-center gap-4">
         <Link href="/" className="flex items-center gap-1">
           <Logo size={20} />
