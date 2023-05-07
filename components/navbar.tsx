@@ -19,7 +19,7 @@ export const Navbar = () => {
 
         <SearchBar />
 
-        <div className="hidden gap-1 sm:flex">
+        <div className="flex gap-1">
           <ThemeToggle />
 
           <Button variant="ghost" size="sm" className="p-2" asChild>
