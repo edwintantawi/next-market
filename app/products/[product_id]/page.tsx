@@ -5,10 +5,9 @@ import { AspectRatio } from '~/components/ui/aspect-ratio';
 import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Product } from '~/lib/types';
-import { BackButton } from '~/components/back-button';
 import { notFound } from 'next/navigation';
 
-export default async function ProductDetail({
+export default async function ProductPage({
   params,
 }: {
   params: { product_id: string };
