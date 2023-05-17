@@ -6,6 +6,7 @@ import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Product } from '~/lib/types';
 import { BackButton } from '~/components/back-button';
+import { notFound } from 'next/navigation';
 
 export default async function ProductDetail({
   params,
@@ -15,7 +16,7 @@ export default async function ProductDetail({
   const response = await fetch(
     `${process.env['BASE_API_URL']}/products/${params.product_id}`,
   );
-  const product = (await response.json()) as Product;
+  const product = (await response.json().catch(notFound)) as Product;
 
   return (
     <article className="grid grid-cols-1 gap-6 md:grid-cols-[0.7fr,1fr] md:gap-12 xl:grid-cols-2">
