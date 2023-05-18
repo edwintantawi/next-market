@@ -15,7 +15,7 @@ export const BackButton = ({ children, ...props }: ButtonProps) => {
 
   return (
     <Button variant="secondary" onClick={handleClick} {...props}>
-      <ArrowLeftIcon size={20} className="mr-1" />
+      <ArrowLeftIcon size={20} className="mr-2" />
       {children}
     </Button>
   );
