@@ -3,7 +3,7 @@ import { redirect } from 'next/navigation';
 import { env } from '~/lib/env.mjs';
 import { ProductList } from '~/components/product-list';
 import { ProductItem } from '~/components/product-item';
-import { Product } from '~/lib/types';
+import { Product } from '~/types/product';
 
 export default async function Search(props: { searchParams: { q?: string } }) {
   const response = await fetch(`${env.BASE_API_URL}/products`);

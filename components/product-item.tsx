@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { StarIcon } from 'lucide-react';
 
-import { Product } from '~/lib/types';
+import { Product } from '~/types/product';
 import { AspectRatio } from '~/components/ui/aspect-ratio';
 import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';

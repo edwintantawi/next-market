@@ -6,7 +6,7 @@ import { env } from '~/lib/env.mjs';
 import { AspectRatio } from '~/components/ui/aspect-ratio';
 import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
-import { Product } from '~/lib/types';
+import { Product } from '~/types/product';
 
 export default async function ProductPage({
   params,
