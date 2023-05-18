@@ -5,8 +5,9 @@ import { Logo } from '~/components/ui/logo';
 import { Button } from '~/components/ui/button';
 import { ThemeToggle } from '~/components/theme-toggle';
 import { SearchBar } from '~/components/search-bar';
+import { AuthMenu } from '~/components/auth-menu';
 
-export const Navbar = () => {
+export const Navbar = (async () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-white dark:bg-background">
       <div className="container flex h-14 items-center gap-4">
@@ -34,13 +35,8 @@ export const Navbar = () => {
           </Button>
         </div>
 
-        <div className="hidden gap-2 sm:flex">
-          <Button variant="secondary" size="sm">
-            Login
-          </Button>
-          <Button size="sm">Register</Button>
-        </div>
+        <AuthMenu />
       </div>
     </nav>
   );
-};
+}) as unknown as () => JSX.Element;
