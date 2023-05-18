@@ -1,11 +1,12 @@
 import Image from 'next/image';
 import { StarIcon } from 'lucide-react';
+import { notFound } from 'next/navigation';
 
+import { env } from '~/lib/env.mjs';
 import { AspectRatio } from '~/components/ui/aspect-ratio';
 import { Badge } from '~/components/ui/badge';
 import { Separator } from '~/components/ui/separator';
 import { Product } from '~/lib/types';
-import { notFound } from 'next/navigation';
 
 export default async function ProductPage({
   params,
@@ -13,7 +14,7 @@ export default async function ProductPage({
   params: { product_id: string };
 }) {
   const response = await fetch(
-    `${process.env['BASE_API_URL']}/products/${params.product_id}`,
+    `${env.BASE_API_URL}/products/${params.product_id}`,
   );
   const product = (await response.json().catch(notFound)) as Product;
 
