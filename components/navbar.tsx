@@ -7,7 +7,7 @@ import { ThemeToggle } from '~/components/theme-toggle';
 import { SearchBar } from '~/components/search-bar';
 import { AuthMenu } from '~/components/auth-menu';
 
-export const Navbar = (async () => {
+export const Navbar = async () => {
   return (
     <nav className="sticky top-0 z-50 border-b bg-white dark:bg-background">
       <div className="container flex h-14 items-center gap-4">
@@ -39,4 +39,4 @@ export const Navbar = (async () => {
       </div>
     </nav>
   );
-}) as unknown as () => JSX.Element;
+};

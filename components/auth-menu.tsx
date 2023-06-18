@@ -7,7 +7,7 @@ import {
 import { SignInButton, SignOutButton } from '~/components/auth-button';
 import { getCurrentUser } from '~/lib/session';
 
-export const AuthMenu = (async () => {
+export const AuthMenu = async () => {
   const { isAuthenticated, user } = await getCurrentUser();
 
   if (!isAuthenticated) return <SignInButton />;
@@ -36,4 +36,4 @@ export const AuthMenu = (async () => {
       </PopoverContent>
     </Popover>
   );
-}) as unknown as () => JSX.Element;
+};
